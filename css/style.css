@@ -1,0 +1,72 @@
+/*
+style.css
+---------
+ 
+Par Mahou Elyès
+*/
+@charset "UTF-8";
+
+@font-face {
+     font-family: 'Akaya Telivigala', cursive;
+     text-align: center;
+     border-radius: 10px
+}
+
+/**Title "Poch'Lib"**/
+h1{
+	background-color: whitesmoke;
+	box-shadow: 0px 6px 0px grey;
+  text-align: center;
+}
+
+/**Title "Nouveau Livre" - "Ma poch'liste" - "Résultat s de recherche"**/
+h2 {
+  font-family: 'Akaya Telivigala', cursive;
+  text-align: center;
+  color: black;
+  padding-top: 10px;
+}
+
+/**text-rendering : lisibility over rapidity & overflow-x : wrap item**/
+html,
+body {
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/*********************body*********************/
+body {
+  text-align: center;
+  background-color: #f5f5f5;
+  width: auto;
+}
+
+.container {
+  /* On ajoute une marge sur les cotés de l'écran */
+  padding-right: 15px;
+  padding-left: 15px;
+    /* Et on centre */
+  margin-right: auto;
+  margin-left: auto; 
+  /* Sur les grands écrans, on limite la largeur du contenu */
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+  float: left;
+  border: solid 2px black;
+  border-radius: 17px;
+  height: 300pt;
+  text-align: justify;
+  overflow: auto; }
+
+/**logo**/
+  .logo {
+  height: 80px;
+  width: auto;
+  float: right;
+  margin: 5px;
+  border-radius: 50px;
+}
+
