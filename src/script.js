@@ -51,7 +51,7 @@ div_form_fields.appendChild(input_author);
 const message_title_author_missing = document.createElement("p");
 div_form_fields.appendChild(message_title_author_missing);
 message_title_author_missing.innerHTML =
-  "Merci de renseigner le Titre du livre et le Nom de l'auteur";
+  "Merci de renseigner le titre du livre et le nom de l'auteur";
 message_title_author_missing.id = "errorMessage_title_author";
 message_title_author_missing.className = "errorMessage";
 message_title_author_missing.style.color = "red";
@@ -129,7 +129,7 @@ function page_onload() {
   document.getElementById("divResults").style.display = "none";
 }
 
-/**Set page onclick "Ajouter un livre"**/
+/**Set page onclick "Ajouter un livre"on declenche la methode whenonclick_addbook**/
 document.getElementById("buttonAddBook").onclick = function () {
   whenOnClick_addBook();
 };
@@ -181,7 +181,7 @@ function whenOnClick_Searched() {
   console.log(searched_title);
   console.log(searched_author);
 
-  if (searched_title == "" || searched_author == "") {
+  if (searched_title == "" || searched_author == "" || searched_title.length == 0 ) {
     message_title_author_missing.style.display = "block";
     document.getElementById("content").style.display = "block";
     document.getElementById("divResults").style.display = "none";
