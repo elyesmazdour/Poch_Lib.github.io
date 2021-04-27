@@ -1,0 +1,34 @@
+{
+  "name": "poch_lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elyesmazdour/elyesmazdour.github.io.git"
+  },
+  "keywords": [
+    "poch_lib"
+  ],
+  "author": "Elyes_Mahou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elyesmazdour/elyesmazdour.github.io/issues"
+  },
+  "homepage": "https://github.com/elyesmazdour/elyesmazdour.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
