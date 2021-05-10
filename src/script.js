@@ -177,11 +177,12 @@ function whenOnClick_Searched() {
 
   var searched_title = document.getElementById("bookTitle").value;
   var searched_author = document.getElementById("author").value;
+  var searched_titleValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
   console.log(searched_title);
   console.log(searched_author);
 
-  if (searched_title == "" || searched_author == "" || searched_title.length == 0 ) {
+  if (searched_title == "" || searched_author == "" || searched_titleValid.test(searched_title.value) == false) {
     message_title_author_missing.style.display = "block";
     document.getElementById("content").style.display = "block";
     document.getElementById("divResults").style.display = "none";
