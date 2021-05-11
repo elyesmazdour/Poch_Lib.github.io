@@ -172,17 +172,16 @@ document.getElementById("buttonSearchBook").onclick = function () {
 function whenOnClick_Searched() {
   document.getElementById("divButtonAddBook").style.display = "none";
   document.getElementById("divForm").style.display = "block";
-  document.getElementById("content").style.display = "none";
+  document.getElementById("content").style.display = "block";
   document.getElementById("divResults").style.display = "block";
 
   var searched_title = document.getElementById("bookTitle").value;
   var searched_author = document.getElementById("author").value;
-  var searched_titleValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
   console.log(searched_title);
   console.log(searched_author);
 
-  if (searched_title == "" || searched_author == "" || searched_titleValid.test(searched_title.value) == false) {
+  if (searched_title == "" || searched_author == "" ) {
     message_title_author_missing.style.display = "block";
     document.getElementById("content").style.display = "block";
     document.getElementById("divResults").style.display = "none";
@@ -205,7 +204,7 @@ function whenOnClick_Searched() {
             displayResultBooks(data.items[i], InPochList);
           }
         } else {
-          div_result_books.style.display = "none";
+          div_result_books.style.display = "block";
           message_NoBookInDB.style.display = "block";
         }
         NewSearch = false;
